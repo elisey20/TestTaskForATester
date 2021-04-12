@@ -192,7 +192,6 @@ public class CalculatorTest
         int firstNumber, secondNumber;
         firstNumber = secondNumber = 0;
 
-
         calc.setInputFieldLeft(String.valueOf(firstNumber));
         calc.setInputFieldRight(String.valueOf(secondNumber));
         calc.clickDivButton();
