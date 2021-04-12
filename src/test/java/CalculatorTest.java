@@ -293,6 +293,7 @@ public class CalculatorTest
         calc.setInputFieldLeft(String.valueOf(firstNumber));
         calc.setInputFieldRight(String.valueOf(secondNumber));
 
+        
         calc.clickMulButton();
         Assert.assertEquals(calc.getResultTextView(), firstNumber + ".00 * " + secondNumber + ".00 = " + (firstNumber * secondNumber) + ".00");
     }
