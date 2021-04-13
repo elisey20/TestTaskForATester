@@ -9,6 +9,7 @@
 4. Запустить эмулятор с Nexus 5,
 5. Запустить Appium,
 6. Через Inspector задать следующие поля в поле JSON Representation:
+```json
 {
   "deviceName": "nexus",
   "platformName": "Android",
@@ -17,6 +18,7 @@
   "appPackage": "com.vbanthia.androidsampleapp",
   "appActivity": "com.vbanthia.androidsampleapp.MainActivity"
 }
+```
 7. Нажать Start Session,
 8. Открыть терминал в клонированном репозитории на локальном ПК,
 9. Ввести команду mvn install clean,
