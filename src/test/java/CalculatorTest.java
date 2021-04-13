@@ -293,7 +293,7 @@ public class CalculatorTest
         calc.setInputFieldLeft(String.valueOf(firstNumber));
         calc.setInputFieldRight(String.valueOf(secondNumber));
 
-        
+
         calc.clickMulButton();
         Assert.assertEquals(calc.getResultTextView(), firstNumber + ".00 * " + secondNumber + ".00 = " + (firstNumber * secondNumber) + ".00");
     }
@@ -592,7 +592,7 @@ public class CalculatorTest
     }
 
     @Test(priority = 13, description = "real negative numbers")
-    private void test13_3()
+    private void test13_31()
     {
         String firstNumber = "-5.12";
         String secondNumber = "-7.95";
@@ -602,6 +602,32 @@ public class CalculatorTest
 
         calc.clickMulButton();
         Assert.assertEquals(calc.getResultTextView(), "-5.12 * -7.95 = 40.70");
+    }
+
+    @Test(priority = 13, description = "real negative numbers")
+    private void test13_32()
+    {
+        String firstNumber = "-5.1212";
+        String secondNumber = "-7.9568";
+
+        calc.setInputFieldLeft(firstNumber);
+        calc.setInputFieldRight(secondNumber);
+
+        calc.clickMulButton();
+        Assert.assertEquals(calc.getResultTextView(), "-5.12 * -7.95 = 40.75");
+    }
+
+    @Test(priority = 13, description = "real negative numbers")
+    private void test13_33()
+    {
+        String firstNumber = "-4.6";
+        String secondNumber = "-3.456";
+
+        calc.setInputFieldLeft(firstNumber);
+        calc.setInputFieldRight(secondNumber);
+
+        calc.clickMulButton();
+        Assert.assertEquals(calc.getResultTextView(), "-4.6 * -3.46 = 15.9");
     }
 
     @Test(priority = 13, description = "real negative numbers")
